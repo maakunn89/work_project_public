@@ -11,6 +11,7 @@ function Home() {
         <p>Home</p>
         <Link to="/about">About</Link>
         <Link to="/works">Works</Link>
+        <Link to="/links">Links</Link>
         <Link to="/contact">Contact</Link>
       </header>
     </div>
