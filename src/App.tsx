@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Home from './blog/Home'
-import About from './blog/About'
-import Works from './blog/Works'
-import Links from './blog/Links'
-import Contact from './blog/Contact'
+import Home from './blog/tsx/Home'
+import About from './blog/tsx/About'
+import Works from './blog/tsx/Works'
+import Links from './blog/tsx/Links'
+import Contact from './blog/tsx/Contact'
 import './App.css'
 
 function App() {
