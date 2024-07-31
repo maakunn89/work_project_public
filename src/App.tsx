@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Home from './blog/tsx/Home'
+import Top from './blog/tsx/Top'
 import About from './blog/tsx/About'
 import Works from './blog/tsx/Works'
 import Links from './blog/tsx/Links'
@@ -15,7 +15,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
+            <Route index element={<Top />} />
             <Route path="/about" element={<About />} />
             <Route path="/works" element={<Works />} />
             <Route path="/links" element={<Links />} />

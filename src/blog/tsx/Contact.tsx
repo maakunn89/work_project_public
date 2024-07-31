@@ -3,8 +3,11 @@ import { init, send } from 'emailjs-com'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../css/Contact.css'
+import { Helmet } from 'react-helmet-async'
 
 const Contact = () => {
+  const componentName = 'Contact'
+
   const [name, setName] = useState('') // 「ご氏名」の部分
   const [company, setCompany] = useState('') // 「会社名」の部分
   const [mail, setMail] = useState('') // 「メールアドレス」の部分
@@ -55,6 +58,9 @@ const Contact = () => {
 
   return (
     <div className="content_wrapper">
+      <Helmet>
+        <title>Principal Dawn | {componentName}</title>
+      </Helmet>
       <div className="page_title">
         Contact
         <p className="title_description">ご連絡はこちら</p>
@@ -72,7 +78,7 @@ const Contact = () => {
         <form>
           <div className="form_row">
             <div className="text gray">
-              <label htmlFor="nameForm">ご氏名：</label>
+              <label htmlFor="nameForm">{decodeURI('ご氏名\u3000\u3000\u3000\u3000：')}</label>
             </div>
             <input
               type="text"
@@ -80,12 +86,13 @@ const Contact = () => {
               className="formInput"
               name="user_name"
               value={name}
+              required
               onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div className="form_row">
             <div className="text gray">
-              <label htmlFor="companyNameForm">会社名：</label>
+              <label htmlFor="companyNameForm">会社名（任意）：</label>
             </div>
             <input
               type="text"
@@ -106,12 +113,13 @@ const Contact = () => {
               className="formInput"
               name="user_email"
               value={mail}
+              required
               onChange={(e) => setMail(e.target.value)}
             />
           </div>
           <div className="form_row">
             <div className="text gray">
-              <label htmlFor="mailTitleForm">件名：</label>
+              <label htmlFor="mailTitleForm">{decodeURI('件名\u3000\u3000\u3000\u3000\u3000：')}</label>
             </div>
             <input
               type="text"
@@ -119,30 +127,32 @@ const Contact = () => {
               className="formInput"
               name="title"
               value={title}
+              required
               onChange={(e) => setTitle(e.target.value)}
             />
           </div>
           <div className="form_row">
             <div className="text gray">
-              <label htmlFor="mailContentForm">お問い合わせ内容：</label>
+              <label htmlFor="mailContentForm">問い合わせ内容：</label>
             </div>
             <textarea
               id="mailContentForm"
               className="formInput"
               name="message"
               value={message}
+              required
               onChange={(e) => setMessage(e.target.value)}
             />
           </div>
           <div className="btns">
             <div>
-              <button onClick={handleClick} disabled={disableSend}>
-                <strong>お問い合わせを送信する</strong>
+              <button className="submit_button" onClick={handleClick} disabled={disableSend}>
+                お問い合わせを送信する
               </button>
             </div>
             <div>
-              <button onClick={handleCanceled}>
-                <strong>キャンセル</strong>
+              <button className="cancel_button" onClick={handleCanceled}>
+                全て消去
               </button>
             </div>
           </div>

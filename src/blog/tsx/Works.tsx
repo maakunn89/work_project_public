@@ -1,9 +1,14 @@
 import React from 'react'
 import '../css/Works.css'
+import { Helmet } from 'react-helmet-async'
 
 const Works = () => {
+  const componentName = 'Works'
   return (
     <div className="content_wrapper">
+      <Helmet>
+        <title>Principal Dawn | {componentName}</title>
+      </Helmet>
       <div className="page_title">
         Works
         <p className="title_description">作品やお仕事など</p>

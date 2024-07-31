@@ -82,6 +82,7 @@
 }
 
 .content_wrapper {
+  padding-left: 30px;
   background-color: #15202b;
   color: #ffffff;
   min-height: 100vh;
@@ -102,6 +103,8 @@
 }
 
 .formInput {
+  width: 340px;
+  border: none;
   background-color: #d7dee2;
 }
 

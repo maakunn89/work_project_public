@@ -1,9 +1,14 @@
 import React from 'react'
 import '../css/Links.css'
+import { Helmet } from 'react-helmet-async'
 
 const Links = () => {
+  const componentName = 'Links'
   return (
     <div className="content_wrapper">
+      <Helmet>
+        <title>Principal Dawn | {componentName}</title>
+      </Helmet>
       <div className="page_title">
         Links
         <p className="title_description">他の活動場所</p>
