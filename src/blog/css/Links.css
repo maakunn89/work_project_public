@@ -1,0 +1,17 @@
+.links_heading {
+    margin-top: 5px;
+    font-size: 30px;
+}
+
+.links_row {
+    margin-left: 20px;
+    font-size: 25px;
+    display: flex;
+}
+
+.links_description {
+    font-size: 15px;
+    margin-left: 20px;
+    align-self: center;
+    line-height: 5px;
+}
