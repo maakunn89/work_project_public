@@ -8,7 +8,7 @@ const Header = () => {
       <div className="header_title">Principal Dawn</div>
       <div className="header_links">
         <Link className="header_link" to="/">
-          Home
+          Top
         </Link>
         <Link className="header_link" to="/about">
           About
