@@ -6,6 +6,7 @@ import '../css/Layout.css'
 const Layout = () => {
   return (
     <>
+      <meta charSet="utf-8" />
       <Header></Header>
       <Outlet></Outlet>
     </>

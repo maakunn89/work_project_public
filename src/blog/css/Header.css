@@ -1,5 +1,9 @@
 .header_content {
+    background-color: #282c34;
     display: flex;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
     width: 100%;
     justify-content: space-around;
 }
@@ -14,4 +18,37 @@
     font-size: 20px;
     line-height: 35px;
     justify-content: space-around;
+}
+
+.header_link {
+    text-decoration: none;
+    background-color: #282c34;
+    color: #abb2c0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    width: 20%;
+}
+
+.header_link::after {
+    background-color: #abb2c0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 250%;
+    transform: skewY(-20deg) scale(1, 0);
+    transform-origin: left top;
+    transition: .33s cubic-bezier(0.45, 0, 0.55, 1);
+    z-index: -1;
+}
+
+.header_link:hover {
+    color: #282c34;
+}
+
+.header_link:hover::after {
+    transform: skewY(-10deg) scale(1, 1);
 }
