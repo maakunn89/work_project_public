@@ -55,7 +55,10 @@ const Contact = () => {
 
   return (
     <div className="content_wrapper">
-      <div className="page_title">Contact</div>
+      <div className="page_title">
+        Contact
+        <p className="title_description">ご連絡はこちら</p>
+      </div>
       <div className="contents">
         <p className="text">
           お仕事や各種お問い合わせは、以下のフォームよりお願いいたします。
