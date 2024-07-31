@@ -1,5 +1,6 @@
 .header_content {
-    background-color: #282c34;
+    font-family: 'Cairo', sans-serif;
+    background-color: #15202b;
     display: flex;
     align-items: center;
     font-size: calc(10px + 2vmin);
@@ -22,8 +23,8 @@
 
 .header_link {
     text-decoration: none;
-    background-color: #282c34;
-    color: #abb2c0;
+    background-color: #15202b;
+    color: #8899a6;
     overflow: hidden;
     position: relative;
     text-align: center;
@@ -32,12 +33,12 @@
 }
 
 .header_link::after {
-    background-color: #abb2c0;
+    background-color: #8899a6;
     position: absolute;
     top: 0;
     left: 0;
     content: '';
-    width: 100%;
+    width: 110%;
     height: 250%;
     transform: skewY(-20deg) scale(1, 0);
     transform-origin: left top;
@@ -46,7 +47,7 @@
 }
 
 .header_link:hover {
-    color: #282c34;
+    color: #15202b;
 }
 
 .header_link:hover::after {

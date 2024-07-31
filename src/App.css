@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #15202b;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,10 +28,41 @@
   color: #61dafb;
 }
 
+.page_title {
+  font-family: 'Cairo', sans-serif;
+  font-size: 50px;
+}
+
+.text {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-size: 20px;
+}
+
+.content_wrapper {
+  background-color: #15202b;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.link {
+  text-decoration: none;
+  background-color: #15202b;
+  color: #8899a6;
+  text-align: center;
+  z-index: 1;
+  transition: .33s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.link:hover {
+  background-color: #8899a6;
+  color: #15202b;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
