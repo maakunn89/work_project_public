@@ -9,10 +9,20 @@ const Top = () => {
       <Helmet>
         <title>Principal Dawn</title>
       </Helmet>
-      <Link to="/about">About</Link>
-      <Link to="/works">Works</Link>
-      <Link to="/links">Links</Link>
-      <Link to="/contact">Contact</Link>
+      <div className="contents">
+        <Link className="link" to="/about">
+          About
+        </Link>
+        <Link className="link" to="/works">
+          Works
+        </Link>
+        <Link className="link" to="/links">
+          Links
+        </Link>
+        <Link className="link" to="/contact">
+          Contact
+        </Link>
+      </div>
     </div>
   )
 }
