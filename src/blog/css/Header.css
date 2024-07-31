@@ -1,0 +1,17 @@
+.header_content {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.header_title {
+    font-size: 30px;
+}
+
+.header_links {
+    display: flex;
+    width: 80%;
+    font-size: 20px;
+    line-height: 35px;
+    justify-content: space-around;
+}
