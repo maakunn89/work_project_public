@@ -10,10 +10,9 @@ const Header = () => {
     setCount(newCount);
   };
   useEffect(() => {
-    console.log(count);
-    if (count < 5) {
+    if (count < 89) {
       setSecret(false);
-    } else if (count < 10) {
+    } else if (count < 100) {
       setSecret(true);
     } else {
       setCount(0);
@@ -21,7 +20,7 @@ const Header = () => {
   }, [count]);
   return (
     <div className="header_content">
-      <div className="header_title" onClick={countUp}><span className='phead'>P</span>rincipal Dawn</div>
+      <div className="header_title"><span className={secret ? count % 2 == 0 ? 'phead rotate' : 'phead_blight rotate' : count % 2 == 0 ? 'phead' : 'phead_blight'} onClick={countUp}>P</span>rincipal Dawn</div>
       <div className="header_links">
         <Link className="header_link" to="/">
           Top
