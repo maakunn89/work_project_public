@@ -1,0 +1,11 @@
+.content_wrapper {
+    padding-left: 30px;
+}
+
+.form_row {
+    display: flex;
+}
+
+.btns {
+    display: flex;
+}

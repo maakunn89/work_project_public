@@ -31,11 +31,45 @@
 .page_title {
   font-family: 'Cairo', sans-serif;
   font-size: 50px;
+  animation: page_title 0.75s 1;
+}
+
+@keyframes page_title {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.contents {
+  padding-left: 15px;
+  animation: contents 1s 1;
+}
+
+@keyframes contents {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .text {
   font-family: 'M PLUS 1p', sans-serif;
   font-size: 20px;
+}
+
+.gray {
+  color: #d7dee2;
 }
 
 .content_wrapper {
@@ -50,12 +84,16 @@
   color: #8899a6;
   text-align: center;
   z-index: 1;
-  transition: .33s cubic-bezier(0.45, 0, 0.55, 1);
+  transition: .15s cubic-bezier(0.45, 0, 0.55, 1);
 }
 
 .link:hover {
   background-color: #8899a6;
   color: #15202b;
+}
+
+.formInput {
+  background-color: #d7dee2;
 }
 
 @keyframes App-logo-spin {
