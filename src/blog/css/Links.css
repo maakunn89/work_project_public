@@ -1,3 +1,10 @@
+.content_wrapper_links {
+    padding-left: 30px;
+    background-color: #15202b;
+    color: #ffffff;
+    height: 100%;
+}
+
 .links_img {
     height: 100%;
     background-image: url(/src/blog/img/links.JPG);
@@ -34,5 +41,14 @@
     .links_img {
         background-size: cover;
         background-position: 50px top;
+    }
+}
+
+@media screen and (max-height: 692px) {
+    .content_wrapper_links {
+        padding-left: 30px;
+        background-color: #15202b;
+        color: #ffffff;
+        height: fit-content;
     }
 }
