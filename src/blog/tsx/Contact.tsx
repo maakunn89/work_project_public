@@ -57,12 +57,12 @@ const Contact = () => {
   const disableSend = name === '' || mail === '' || title === '' || message === ''
 
   return (
-    <div className="content_wrapper">
-      <div className='contact_img'>
+    <div className="content_wrapper_contact">
+      <div className="contact_img">
         <Helmet>
           <title>Principal Dawn | {componentName}</title>
         </Helmet>
-        <div className='contact_bg'>
+        <div className="contact_bg">
           <div className="page_title">
             Contact
             <p className="title_description">ご連絡はこちら</p>

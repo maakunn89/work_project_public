@@ -1,9 +1,16 @@
+.content_wrapper_contact {
+    padding-left: 30px;
+    background-color: #15202b;
+    color: #ffffff;
+    height: 100%;
+}
+
 .contact_img {
     height: 100%;
     background-image: url(/src/blog/img/contact.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: 450px top;
+    background-position: 300px top;
 }
 
 .contact_bg {
@@ -51,5 +58,14 @@ textarea {
     .contact_img {
         background-size: cover;
         background-position: 250px top;
+    }
+}
+
+@media screen and (max-height: 692px) {
+    .content_wrapper_contact {
+        padding-left: 30px;
+        background-color: #15202b;
+        color: #ffffff;
+        height: fit-content;
     }
 }
