@@ -14,9 +14,7 @@ const Secret = () => {
                 <p className="title_description">みんなにはないしょだよ</p>
             </div>
             <div className="contents text">
-                <div>のホームページです。</div>
-                <div>絵を描いたりプログラミングをしたりしながら暮らしています。</div>
-                <div>普段は主にTwitterにいますが、こちらも時々更新します。</div>
+                <div>何を入れるかは未定です　とりあえず見つけた君はすごい</div>
             </div>
         </div>
     )
