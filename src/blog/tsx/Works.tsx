@@ -56,7 +56,9 @@ const Works = () => {
     } else if (openIllust) {
       await new Promise((resolve) => setTimeout(resolve, 150))
     }
-    if (!openIllust) {
+    if (openIllust && !openMovie) {
+      setHeightChanger(!openIllust)
+    } else if (!openIllust && !openMovie) {
       setHeightChanger(!openIllust)
     }
   }
