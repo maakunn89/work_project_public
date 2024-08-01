@@ -1,3 +1,16 @@
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
 .App {
   text-align: center;
 }
@@ -72,9 +85,31 @@
   }
 }
 
+.phead {
+  color: #fff59d;
+  transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+  line-height: 30px;
+  display: inline-block;
+}
+
+.phead_blight {
+  background-color: #fff59d;
+  color: #15202b;
+  transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+  line-height: 30px;
+  display: inline-block;
+}
+
+.rotate {
+  display: inline-block;
+  transform: rotate(360deg);
+  transition: .3s;
+}
+
 .text {
   font-family: 'M PLUS 1p', sans-serif;
   font-size: 20px;
+  white-space: nowrap;
 }
 
 .gray {
@@ -85,20 +120,20 @@
   padding-left: 30px;
   background-color: #15202b;
   color: #ffffff;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .link {
   text-decoration: none;
-  background-color: #15202b;
-  color: #8899a6;
+  color: #fff59d;
   text-align: center;
   z-index: 1;
   transition: .15s cubic-bezier(0.45, 0, 0.55, 1);
+  white-space: nowrap;
 }
 
 .link:hover {
-  background-color: #8899a6;
+  background-color: #fff59d;
   color: #15202b;
 }
 
