@@ -23,20 +23,20 @@ import yukiko1 from '../img/yukiko1.png'
 import yukiko2 from '../img/yukiko2.png'
 import yukiko1_hover from '../img/wa-i.png'
 import yukiko2_hover from '../img/abareru.png'
+import babibabi from '../img/babibabi.png'
+import buttercup from '../img/buttercup.png'
+import nodoka from '../img/nodoka.png'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import '../css/Works.css'
 import { Helmet } from 'react-helmet-async'
-import { wait } from '@testing-library/user-event/dist/utils'
-import { waitFor } from '@testing-library/react'
 
 const Works = () => {
   const componentName = 'Works'
-  const [rect, setRect] = useState(0)
-  const [openMovie, setOpenMovie] = useState(true)
-  const [openIllust, setOpenIllust] = useState(true)
-  const [openOthers, setOpenOthers] = useState(true)
-  const [heightChanger, setHeightChanger] = useState(true)
+  const [openMovie, setOpenMovie] = useState(false)
+  const [openIllust, setOpenIllust] = useState(false)
+  const [openOthers, setOpenOthers] = useState(false)
+  const [heightChanger, setHeightChanger] = useState(false)
 
   const changeOpenMovie = async () => {
     setOpenMovie(!openMovie)
@@ -145,6 +145,17 @@ const Works = () => {
                 <div className="works_list_inner">
                   <div className="works_row">
                     <div className="work_single">
+                      <div className="work_caption">
+                        ここにない作品は
+                        <Link target="_brank" className="link" to="https://www.pixiv.net/users/10358070">
+                          pixiv
+                        </Link>
+                        などをご覧ください。
+                      </div>
+                    </div>
+                  </div>
+                  <div className="works_row">
+                    <div className="work_single">
                       {ImageModal(dracoSega, 'ドラコケンタウロス SEGAのサイトに載った')}
                       <div className="work_caption">
                         ドラコケンタウロス
@@ -171,11 +182,16 @@ const Works = () => {
                   </div>
                   <div className="works_row">
                     <div className="work_single">
-                      {ImageModal(pine, 'パイン(ボンバーガール) リクエストから')}
+                      {ImageModal(babibabi, 'オリジナル バ美肉体')}
                       <div className="work_caption">
-                        パイン
+                        オリジナル
                         <br />
-                        リクエストから
+                        バ美肉体
+                        <br />
+                        デザイン:
+                        <Link target="_brank" className="link" to="https://x.com/sakana299">
+                          さかなさん
+                        </Link>
                       </div>
                     </div>
                     <div className="work_single">
@@ -197,9 +213,9 @@ const Works = () => {
                   </div>
                   <div className="works_row">
                     <div className="work_single">
-                      {ImageModal(iizakamahiro, '飯坂真尋 リクエストから')}
+                      {ImageModal(pine, 'パイン(ボンバーガール) リクエストから')}
                       <div className="work_caption">
-                        飯坂真尋
+                        パイン
                         <br />
                         リクエストから
                       </div>
@@ -213,9 +229,9 @@ const Works = () => {
                       </div>
                     </div>
                     <div className="work_single">
-                      {ImageModal(ahuoni, 'アフリカオニネズミ リクエストから')}
+                      {ImageModal(iizakamahiro, '飯坂真尋 リクエストから')}
                       <div className="work_caption">
-                        アフリカオニネズミ
+                        飯坂真尋
                         <br />
                         リクエストから
                       </div>
@@ -239,11 +255,37 @@ const Works = () => {
                       </div>
                     </div>
                     <div className="work_single">
+                      {ImageModal(ahuoni, 'アフリカオニネズミ リクエストから')}
+                      <div className="work_caption">
+                        アフリカオニネズミ
+                        <br />
+                        リクエストから
+                      </div>
+                    </div>
+                  </div>
+                  <div className="works_row">
+                    <div className="work_single">
                       {ImageModal(ikuhosidorako, '幾星学園のドラコ なお未所持')}
                       <div className="work_caption">
                         幾星学園のドラコ
                         <br />
                         なお未所持
+                      </div>
+                    </div>
+                    <div className="work_single">
+                      {ImageModal(buttercup, 'バターカップ パワパフZ LOVE')}
+                      <div className="work_caption">
+                        バターカップ
+                        <br />
+                        パワパフZ LOVE
+                      </div>
+                    </div>
+                    <div className="work_single">
+                      {ImageModal(nodoka, '宮崎のどか ネギまは原作派')}
+                      <div className="work_caption">
+                        宮崎のどか
+                        <br />
+                        ネギまは原作派
                       </div>
                     </div>
                   </div>
