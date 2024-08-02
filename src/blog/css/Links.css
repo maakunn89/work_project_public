@@ -11,6 +11,19 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right top;
+    animation: bg 1s 1;
+}
+
+@keyframes bg {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .links_bg {
@@ -22,12 +35,14 @@
 .links_heading {
     margin-top: 5px;
     font-size: 30px;
+    transform: rotate(0.03deg);
 }
 
 .links_row {
     margin-left: 20px;
     font-size: 25px;
     display: flex;
+    transform: rotate(0.03deg);
 }
 
 .links_description {
@@ -35,6 +50,7 @@
     margin-left: 20px;
     align-self: center;
     line-height: 5px;
+    transform: rotate(0.03deg);
 }
 
 @media screen and (max-width: 1000px) {

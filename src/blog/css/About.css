@@ -8,9 +8,22 @@
 .about_img {
     height: 100%;
     background-image: url(/src/blog/img/about.png);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: right top;
+    animation: bg 1s 1;
+}
+
+@keyframes bg {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .about_bg {
@@ -46,6 +59,7 @@
     display: flex;
     width: 100px;
     height: 100px;
+    padding-bottom: 10px;
 }
 
 @media screen and (max-width: 1000px) {

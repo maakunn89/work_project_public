@@ -10,6 +10,19 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 500px top;
+    animation: bg 1s 1;
+}
+
+@keyframes bg {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .works_bg {
@@ -64,6 +77,10 @@
     margin-bottom: 15px;
 }
 
+.work_title {
+    font-family: 'Cairo', 'M PLUS 1p', sans-serif;
+}
+
 .work_link {
     margin-left: 20px;
     font-size: 20px;
@@ -104,6 +121,13 @@
 }
 .switch_image:hover img:last-of-type {
     opacity: 1;
+}
+
+@media screen and (max-width: 1150px) {
+    .works_img {
+        background-size: cover;
+        background-position: 200px top;
+    }
 }
 
 @media screen and (max-height: 692px) {
