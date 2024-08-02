@@ -153,7 +153,7 @@ const Contact = () => {
                   </button>
                 </div>
                 <div>
-                  <button className="cancel_button" onClick={handleCanceled}>
+                  <button type="button" className="cancel_button" onClick={handleCanceled}>
                     全て消去
                   </button>
                 </div>
