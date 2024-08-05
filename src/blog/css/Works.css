@@ -1,0 +1,116 @@
+.content_wrapper_works {
+    padding-left: 30px;
+    background-color: #15202b;
+    color: #ffffff;
+}
+
+.works_img {
+    height: 100%;
+    background-image: url(/src/blog/img/waiwai.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 500px top;
+}
+
+.works_bg {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.2) 0%, rgba(21, 32, 43, 1) 52.5%);
+}
+
+.works_heading {
+    display: flex;
+    font-family: 'Cairo', sans-serif;
+    margin-top: 5px;
+    font-size: 30px;
+}
+
+.works_description {
+    margin-left: 10px;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 15px;
+    align-self: center;
+}
+
+.works_list {
+    display: grid;
+    margin-left: 20px;
+    font-size: 25px;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease-out;
+}
+
+.arrow_icon {
+    margin-top: 15px;
+    margin-left: 20px;
+    scale: 1.5;
+}
+
+.open {
+    grid-template-rows: 1fr;
+}
+
+.works_list_inner {
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.works_row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.work_single {
+    margin-bottom: 15px;
+}
+
+.work_link {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.work_caption {
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.thumbnail {
+    margin-left: 20px;
+    max-width: 150px;
+    min-width: 150px;
+}
+
+.yukiko1, .yukiko2 {
+    margin-left: 20px;
+}
+
+.switch_image {
+    position: relative;
+}
+
+.switch_image img {
+    transition: opacity 0.5s;
+    max-width: 96px;
+    max-height: 74px;
+}
+.switch_image:hover img:first-of-type {
+    opacity: 0;
+}
+.switch_image img:last-of-type {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+}
+.switch_image:hover img:last-of-type {
+    opacity: 1;
+}
+
+@media screen and (max-height: 692px) {
+    .content_wrapper_works {
+        padding-left: 30px;
+        background-color: #15202b;
+        color: #ffffff;
+        height: fit-content;
+    }
+}

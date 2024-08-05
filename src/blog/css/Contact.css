@@ -1,0 +1,71 @@
+.content_wrapper_contact {
+    padding-left: 30px;
+    background-color: #15202b;
+    color: #ffffff;
+    height: 100%;
+}
+
+.contact_img {
+    height: 100%;
+    background-image: url(/src/blog/img/contact.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 300px top;
+}
+
+.contact_bg {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.2) 0%, rgba(21, 32, 43, 1) 40%);
+}
+
+.form_row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+textarea {
+    margin-top: 1px;
+    border: none;
+    height: 150px;
+    width: 340px;
+}
+
+.btns {
+    display: flex;
+    margin-top: 30px;
+}
+
+.submit_button {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 17px;
+    background-color: #d7dee2;
+}
+
+.submit_button:disabled {
+    font-family: 'M PLUS 1p', sans-serif;
+    background-color: #8899a6;
+}
+
+.cancel_button {
+    font-family: 'M PLUS 1p', sans-serif;
+    margin-left: 20px;
+    font-size: 17px;
+    background-color: #d7dee2;
+}
+
+@media screen and (max-width: 1000px) {
+    .contact_img {
+        background-size: cover;
+        background-position: 250px top;
+    }
+}
+
+@media screen and (max-height: 692px) {
+    .content_wrapper_contact {
+        padding-left: 30px;
+        background-color: #15202b;
+        color: #ffffff;
+        height: fit-content;
+    }
+}
