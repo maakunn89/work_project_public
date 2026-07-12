@@ -11,5 +11,6 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": [
         "source.fixAll.esslint"
-    ]
+    ],
+    "js/ts.tsdk.path": "node_modules\\typescript\\lib"
 }

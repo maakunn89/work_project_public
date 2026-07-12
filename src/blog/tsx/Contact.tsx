@@ -1,43 +1,50 @@
-import React from 'react'
-import { init, send } from 'emailjs-com'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../css/Contact.css'
 import { Helmet } from 'react-helmet-async'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const componentName = 'Contact'
 
-  const [name, setName] = useState('') // 「ご氏名」の部分
-  const [company, setCompany] = useState('') // 「会社名」の部分
-  const [mail, setMail] = useState('') // 「メールアドレス」の部分
-  const [title, setTitle] = useState('') // 「件名」の部分
-  const [message, setMessage] = useState('') // 「お問い合わせ内容」の部分
+  const [name, setName] = useState('')
+  const [company, setCompany] = useState('')
+  const [mail, setMail] = useState('')
+  const [title, setTitle] = useState('')
+  const [message, setMessage] = useState('')
+  const [sending, setSending] = useState(false)
 
-  const sendMail = () => {
-    const userID = process.env.REACT_APP_EMAILJS_USER_ID
-    const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID
-    const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID
-    if (userID !== undefined && serviceID !== undefined && templateID !== undefined) {
-      init(userID)
+  const sendMail = async () => {
+    const userID = import.meta.env.VITE_EMAILJS_USER_ID
+    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
 
-      const template_param = {
-        user_name: name,
-        company: company,
-        user_email: mail,
-        title: title,
-        message: message,
-      }
+    if (!userID || !serviceID || !templateID) {
+      console.error('EmailJSの環境変数が設定されていません')
+      window.alert('送信設定に問題があります。管理者にお問い合わせください。')
+      return
+    }
 
-      send(serviceID, templateID, template_param).then(() => {
-        window.alert('お問い合わせを送信しました。')
+    const template_param = {
+      user_name: name,
+      company: company,
+      user_email: mail,
+      title: title,
+      message: message,
+    }
 
-        setName('')
-        setCompany('')
-        setMail('')
-        setMessage('')
-        setTitle('')
+    try {
+      setSending(true)
+      await emailjs.send(serviceID, templateID, template_param, {
+        publicKey: userID,
       })
+      window.alert('お問い合わせを送信しました。')
+      handleCanceled()
+    } catch (error) {
+      console.error('EmailJS送信エラー:', error)
+      window.alert('送信に失敗しました。時間をおいて再度お試しください。')
+    } finally {
+      setSending(false)
     }
   }
 
@@ -54,7 +61,7 @@ const Contact = () => {
     setTitle('')
   }
 
-  const disableSend = name === '' || mail === '' || title === '' || message === ''
+  const disableSend = name === '' || mail === '' || title === '' || message === '' || sending
 
   return (
     <div className="content_wrapper_contact">
@@ -149,7 +156,7 @@ const Contact = () => {
               <div className="btns">
                 <div>
                   <button className="submit_button" onClick={handleClick} disabled={disableSend}>
-                    お問い合わせを送信する
+                    {sending ? '送信中...' : 'お問い合わせを送信する'}
                   </button>
                 </div>
                 <div>

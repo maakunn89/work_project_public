@@ -80,7 +80,8 @@
     min-width: 150px;
 }
 
-.yukiko1, .yukiko2 {
+.yukiko1,
+.yukiko2 {
     margin-left: 20px;
 }
 
@@ -93,15 +94,18 @@
     max-width: 96px;
     max-height: 74px;
 }
+
 .switch_image:hover img:first-of-type {
     opacity: 0;
 }
+
 .switch_image img:last-of-type {
     position: absolute;
     top: 0px;
     left: 0px;
     opacity: 0;
 }
+
 .switch_image:hover img:last-of-type {
     opacity: 1;
 }

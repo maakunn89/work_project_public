@@ -1,0 +1,57 @@
+.link {
+    text-decoration: none;
+    color: #fff59d;
+    text-align: center;
+    z-index: 1;
+    transition: .15s cubic-bezier(0.45, 0, 0.55, 1);
+    white-space: nowrap;
+}
+
+.link:hover {
+    background-color: #fff59d;
+    color: #15202b;
+}
+
+.contents {
+    animation: contents 1s 1;
+    padding-left: 15px;
+}
+
+.top_title {
+    animation: title .5s 1;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: title;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+    font-size: 50px;
+    text-align: center;
+    transform: rotate(.03deg);
+}
+
+.top_description {
+    animation: title .5s 1;
+    font-family: 'Cairo', M PLUS\ 1p, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    transform: rotate(.03deg);
+}
+
+.top_new {
+    animation: title .5s 1;
+    font-family: 'Cairo', M PLUS\ 1p, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    transform: rotate(.03deg);
+    color: #fff59d;
+}
+
+* {
+    font-family: 'Cairo', sans-serif;
+}
