@@ -106,8 +106,19 @@
 }
 
 .yukiko1,
-.yukiko2 {
+.yukiko2,
+.business {
     margin-left: 20px;
+}
+
+.tanka1 {
+    max-width: 200px;
+    max-height: 400px;
+}
+
+.gohan {
+    max-width: 300px;
+    max-height: 200px;
 }
 
 .switch_image {
