@@ -1,4 +1,6 @@
 .footer_content {
+    position: relative;
+    z-index: 2;
     font-family: 'Cairo', sans-serif;
     background-color: #15202b;
     display: flex;
@@ -56,4 +58,29 @@
 
 .footer_link:hover::after {
     transform: skewY(-10deg) scale(1, 1);
+}
+
+@media screen and (max-width: 768px) {
+    .footer_content {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px 0;
+    }
+
+    .footer_credit {
+        width: 100%;
+        text-align: center;
+        white-space: normal;
+        margin-bottom: 12px;
+    }
+
+    .footer_links {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer_link {
+        width: auto;
+        padding: 0 12px;
+    }
 }

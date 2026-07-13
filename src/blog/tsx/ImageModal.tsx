@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import '../css/ImageModal.css'
 
 const ImageModal = (src: string, alttext: string) => {
@@ -12,16 +13,39 @@ const ImageModal = (src: string, alttext: string) => {
     setIsOpen(false)
   }
 
+  useEffect(() => {
+    if (!isOpen) return
+
+    // モーダル表示中は背景のスクロールを止める
+    const originalOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    // Escapeキーでも閉じられるように
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        handleClose()
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      document.body.style.overflow = originalOverflow
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [isOpen])
+
   return (
     <>
       <img className="thumbnail" onClick={handleOpen} src={src} alt={alttext} />
-      {isOpen && (
-        <div onClick={handleClose} className="modal-overlay">
-          <div className="modal-content">
-            <img src={src} alt={alttext} />
-          </div>
-        </div>
-      )}
+      {isOpen &&
+        createPortal(
+          <div onClick={handleClose} className="modal-overlay">
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <img src={src} alt={alttext} />
+            </div>
+          </div>,
+          document.body
+        )}
     </>
   )
 }

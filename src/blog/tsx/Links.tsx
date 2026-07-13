@@ -21,7 +21,7 @@ const Links = () => {
               SNS
               <div className="links_row">
                 <Link target="_brank" className="link" to="https://twitter.com/maakunn89">
-                  Twitter
+                  Twitter (X)
                 </Link>
                 <div className="links_description">一番よくいる場所です</div>
               </div>
@@ -29,11 +29,17 @@ const Links = () => {
                 <Link target="_brank" className="link" to="https://bsky.app/profile/mk89.bsky.social">
                   Bluesky
                 </Link>
-                <div className="links_description">時々動かします（兼避難所）</div>
+                <div className="links_description">ほぼTwitterと同じ投稿をしています</div>
               </div>
               <div className="links_row">
                 <Link target="_brank" className="link" to="https://misskey.io/@maakunn89">
                   misskey.io
+                </Link>
+                <div className="links_description">時々動かします（兼避難所）</div>
+              </div>
+              <div className="links_row">
+                <Link target="_brank" className="link" to="https://wick-sns.com/sns/profile/5b08fa82-842b-4e18-91de-25e62ea5f767">
+                  Wick
                 </Link>
                 <div className="links_description">時々動かします（兼避難所）</div>
               </div>
@@ -93,7 +99,7 @@ const Links = () => {
                 <Link target="_brank" className="link" to="https://odaibako.net/u/maakunn89">
                   お題箱
                 </Link>
-                <div className="links_description">たまに描きます 正式なリクエストはSKebへ</div>
+                <div className="links_description">たまに描きます 正式なリクエストはSkebへ</div>
               </div>
               <div className="links_row">
                 <Link

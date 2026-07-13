@@ -3,20 +3,36 @@
     background-color: #15202b;
     color: #ffffff;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .contact_img {
-    height: 100%;
-    background-image: url(/src/blog/img/contact.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 300px top;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #15202b;
+    isolation: isolate;
+}
+
+.contact_img::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-color: #15202b;
+    background-image:
+        linear-gradient(to left, rgba(255, 255, 255, 0.2) 0%, rgba(21, 32, 43, 1) 40%),
+        url(/src/blog/img/contact.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right top, 300px top;
+    background-size: 100% 100%, cover;
 }
 
 .contact_bg {
-    height: 100%;
+    flex: 1;
     width: 100%;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0.2) 0%, rgba(21, 32, 43, 1) 40%);
 }
 
 .form_row {
@@ -55,9 +71,9 @@ textarea {
 }
 
 @media screen and (max-width: 1000px) {
-    .contact_img {
-        background-size: cover;
-        background-position: 250px top;
+    .contact_img::before {
+        background-size: 100% 100%, cover;
+        background-position: right top, 250px top;
     }
 }
 
@@ -67,5 +83,35 @@ textarea {
         background-color: #15202b;
         color: #ffffff;
         height: fit-content;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content_wrapper_contact {
+        padding-top: 56px;
+        box-sizing: border-box;
+    }
+
+    .contact_img::before {
+        position: absolute;
+        inset: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        width: 25%;
+        height: auto;
+        background-position: right top, center top;
+        background-size: 100% 100%, cover;
+    }
+
+    .form_row {
+        flex-wrap: wrap;
+    }
+
+    textarea {
+        width: 100%;
+        max-width: 340px;
+        box-sizing: border-box;
     }
 }

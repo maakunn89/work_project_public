@@ -1,8 +1,5 @@
-* {
-  font-family: 'Cairo', sans-serif;
-}
-
 html {
+  font-family: 'Cairo', 'M PLUS 1p', sans-serif;
   height: 100%;
   scroll-behavior: smooth;
 }
@@ -50,6 +47,8 @@ body {
   font-size: 50px;
   animation: page_title 0.75s 1;
   display: flex;
+  transform: rotate(0.03deg);
+  color: #fff59d;
 }
 
 .title_description {
@@ -58,6 +57,8 @@ body {
   display: flex;
   align-items: flex-end;
   margin-left: 10px;
+  transform: rotate(0.03deg);
+  color: #fff59d;
 }
 
 @keyframes page_title {
@@ -114,6 +115,7 @@ body {
   font-family: 'M PLUS 1p', sans-serif;
   font-size: 20px;
   white-space: nowrap;
+  transform: rotate(0.03deg);
 }
 
 .gray {
@@ -134,6 +136,7 @@ body {
   z-index: 1;
   transition: .15s cubic-bezier(0.45, 0, 0.55, 1);
   white-space: nowrap;
+  transform: rotate(0.03deg);
 }
 
 .link:hover {

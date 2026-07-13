@@ -2,24 +2,42 @@
     padding-left: 30px;
     background-color: #15202b;
     color: #ffffff;
+    overflow-x: hidden;
 }
 
 .works_img {
-    height: 100%;
-    background-image: url(/src/blog/img/waiwai.gif);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 500px top;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #15202b;
+    isolation: isolate;
+}
+
+.works_img::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-color: #15202b;
+    background-image:
+        linear-gradient(to left, rgba(255, 255, 255, 0.2) 0%, rgba(21, 32, 43, 1) 52.5%),
+        url(/src/blog/img/waiwai.gif);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right top, 500px top;
+    background-size: 100% 100%, contain;
 }
 
 .works_bg {
-    height: 100%;
+    flex: 1;
     width: 100%;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0.2) 0%, rgba(21, 32, 43, 1) 52.5%);
 }
 
 .works_heading {
+    position: relative;
     display: flex;
+    align-items: center;
     font-family: 'Cairo', sans-serif;
     margin-top: 5px;
     font-size: 30px;
@@ -32,18 +50,24 @@
     align-self: center;
 }
 
+.works_heading .arrow_icon {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;
+    font-size: 30px !important;
+    margin-top: 0;
+    margin-left: 20px;
+    scale: 1.5;
+    cursor: pointer;
+}
+
 .works_list {
     display: grid;
     margin-left: 20px;
     font-size: 25px;
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.3s ease-out;
-}
-
-.arrow_icon {
-    margin-top: 15px;
-    margin-left: 20px;
-    scale: 1.5;
 }
 
 .open {
@@ -57,6 +81,7 @@
 
 .works_row {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
@@ -111,10 +136,32 @@
 }
 
 @media screen and (max-height: 692px) {
+    .works_img {
+        min-height: 100vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .content_wrapper_works {
-        padding-left: 30px;
-        background-color: #15202b;
-        color: #ffffff;
-        height: fit-content;
+        padding-top: 56px;
+        box-sizing: border-box;
+    }
+
+    .works_img::before {
+        position: absolute;
+        inset: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        width: 25%;
+        height: auto;
+        background-position: right top, center top;
+        background-size: 100% 100%, cover;
+    }
+
+    .thumbnail {
+        max-width: 100px;
+        min-width: 100px;
     }
 }

@@ -1,4 +1,6 @@
 .header_content {
+    position: relative;
+    z-index: 2;
     font-family: 'Cairo', sans-serif;
     background-color: #15202b;
     display: flex;
@@ -54,4 +56,93 @@
 
 .header_link:hover::after {
     transform: skewY(-10deg) scale(1, 1);
+}
+
+/* ハンバーガーボタン: デスクトップでは非表示 */
+.header_menu_button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: #ffffff;
+    padding: 8px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.header_menu_button svg {
+    font-size: 30px;
+}
+
+.header_menu_overlay {
+    display: none;
+}
+
+/* ==========================================================
+   モバイル対応
+   ・タイトルは常に左上、ハンバーガーは常に右上に固定
+   ・header_links はハンバーガーで開閉するドロップダウンに変化
+   ========================================================== */
+@media screen and (max-width: 768px) {
+    :root {
+        --header-height-mobile: 56px;
+    }
+
+    .header_content {
+        position: fixed;
+        top: 0;
+        left: 0;
+        justify-content: space-between;
+        width: 100%;
+        height: var(--header-height-mobile);
+        padding: 0 16px;
+        box-sizing: border-box;
+        z-index: 100;
+    }
+
+    .header_title {
+        font-size: 22px;
+    }
+
+    .header_menu_button {
+        display: flex;
+    }
+
+    .header_links {
+        position: fixed;
+        top: var(--header-height-mobile);
+        right: 0;
+        width: 60%;
+        max-width: 260px;
+        height: calc(100vh - var(--header-height-mobile));
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        background-color: #15202b;
+        transform: translateX(100%);
+        transition: transform 0.25s ease-out;
+        z-index: 100;
+        overflow-y: auto;
+    }
+
+    .header_links.open {
+        transform: translateX(0);
+    }
+
+    .header_link {
+        width: 100%;
+        font-size: 22px;
+        line-height: 56px;
+        border-bottom: 1px solid #2c3e50;
+    }
+
+    .header_menu_overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        top: var(--header-height-mobile);
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 99;
+    }
 }
