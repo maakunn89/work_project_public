@@ -3,11 +3,10 @@ import '../css/About.css'
 import { Helmet } from 'react-helmet-async'
 
 const Secret = () => {
-  const componentName = 'Secret'
   return (
     <div className="content_wrapper">
       <Helmet>
-        <title>Principal Dawn | {componentName}</title>
+        <title>Principal Dawn | Secret</title>
       </Helmet>
       <div className="page_title">
         Secret

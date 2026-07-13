@@ -8,12 +8,11 @@ import '../css/About.css'
 import { Helmet } from 'react-helmet-async'
 
 const About = () => {
-  const componentName = 'About'
   return (
     <div className="content_wrapper_about">
       <div className="about_img">
         <Helmet>
-          <title>Principal Dawn | {componentName}</title>
+          <title>Principal Dawn | About</title>
         </Helmet>
         <div className="about_bg">
           <div className="page_title">

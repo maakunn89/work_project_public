@@ -4,11 +4,10 @@ import '../css/Works.css'
 import { Helmet } from 'react-helmet-async'
 
 const Notfound = () => {
-  const componentName = 'Not found'
   return (
     <div className="content_wrapper">
       <Helmet>
-        <title>Principal Dawn | {componentName}</title>
+        <title>Principal Dawn | Not found</title>
       </Helmet>
       <div className="page_title">
         Not found

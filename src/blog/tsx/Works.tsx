@@ -35,7 +35,6 @@ import '../css/Works.css'
 import { Helmet } from 'react-helmet-async'
 
 const Works = () => {
-  const componentName = 'Works'
   const [openMovie, setOpenMovie] = useState(false)
   const [openIllust, setOpenIllust] = useState(false)
   const [openOthers, setOpenOthers] = useState(false)
@@ -71,7 +70,7 @@ const Works = () => {
     <div className="content_wrapper_works" style={heightChanger ? {} : { height: '100%' }}>
       <div className="works_img">
         <Helmet>
-          <title>Principal Dawn | {componentName}</title>
+          <title>Principal Dawn | Works</title>
         </Helmet>
         <div className="works_bg">
           <div className="page_title">
@@ -380,8 +379,8 @@ const Works = () => {
                       <br/>
                       <br/>簡易的な技術相談なども可能です。
                       <br/>
-                      <Link target='_brank' className='link' to='/links'>各種SNS</Link>または
-                      <Link target='_brank' className='link' to='/contact'>連絡フォーム</Link>からお気軽にどうぞ！
+                      <Link target="_blank" rel="noopener noreferrer" className='link' to='/links'>各種SNS</Link>または
+                      <Link target="_blank" rel="noopener noreferrer" className='link' to='/contact'>連絡フォーム</Link>からお気軽にどうぞ！
                       <br/>
                     </div>
                   </div>

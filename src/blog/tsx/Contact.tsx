@@ -5,8 +5,6 @@ import { Helmet } from 'react-helmet-async'
 import emailjs from '@emailjs/browser'
 
 const Contact = () => {
-  const componentName = 'Contact'
-
   const [name, setName] = useState('')
   const [company, setCompany] = useState('')
   const [mail, setMail] = useState('')
@@ -67,7 +65,7 @@ const Contact = () => {
     <div className="content_wrapper_contact">
       <div className="contact_img">
         <Helmet>
-          <title>Principal Dawn | {componentName}</title>
+          <title>Principal Dawn | Contact</title>
         </Helmet>
         <div className="contact_bg">
           <div className="page_title">

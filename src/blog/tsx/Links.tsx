@@ -4,12 +4,11 @@ import '../css/Links.css'
 import { Helmet } from 'react-helmet-async'
 
 const Links = () => {
-  const componentName = 'Links'
   return (
     <div className="content_wrapper_links">
       <div className="links_img">
         <Helmet>
-          <title>Principal Dawn | {componentName}</title>
+          <title>Principal Dawn | Links</title>
         </Helmet>
         <div className="links_bg">
           <div className="page_title">
