@@ -36,7 +36,7 @@ const About = () => {
               たまに絵を描いたり映像や文章を作ったりしています。
               <br />
               普段は主に
-              <Link target="_brank" className="link" to="https://twitter.com/maakunn89">
+              <Link target="_blank" rel="noopener noreferrer" className="link" to="https://twitter.com/maakunn89">
                 Twitter (X)
               </Link>
               にいますが、こちらも時々更新します。

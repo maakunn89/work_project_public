@@ -93,10 +93,10 @@ const Works = () => {
                 <div className="works_list_inner">
                   <div className="work_single">
                     <div className="work_title">ボカロ曲「Dust / Tugi feat.初音ミク」MV作成</div>
-                    <Link target="_brank" className="link work_link" to="https://www.nicovideo.jp/watch/sm42572636">
+                    <Link target="_blank" rel="noopener noreferrer" className="link work_link" to="https://www.nicovideo.jp/watch/sm42572636">
                       ニコニコ動画
                     </Link>
-                    <Link target="_brank" className="link work_link" to="https://www.youtube.com/watch?v=waCgSPZmiDQ">
+                    <Link target="_blank" rel="noopener noreferrer" className="link work_link" to="https://www.youtube.com/watch?v=waCgSPZmiDQ">
                       YouTube
                     </Link>
                   </div>
@@ -104,13 +104,13 @@ const Works = () => {
                   <div className="work_single">
                     <div className="work_title">ふきのとう氏のサムネイル作成および一部楽曲共同制作</div>
                     <Link
-                      target="_brank"
+                      target="_blank" rel="noopener noreferrer"
                       className="link work_link"
                       to="https://www.youtube.com/@fukino89"
                     >
                       SoundCloud
                     </Link>
-                    <Link target="_brank" className="link work_link" to="https://www.youtube.com/@fukino89">
+                    <Link target="_blank" rel="noopener noreferrer" className="link work_link" to="https://www.youtube.com/@fukino89">
                       YouTube
                     </Link>
                   </div>
@@ -118,10 +118,10 @@ const Works = () => {
                   {ImageModal(metrocean, 'metrocean_thumbnail')}
                   <div className="work_single">
                     <div className="work_title">その他 趣味の動画など</div>
-                    <Link target="_brank" className="link work_link" to="https://www.nicovideo.jp/user/144372202">
+                    <Link target="_blank" rel="noopener noreferrer" className="link work_link" to="https://www.nicovideo.jp/user/144372202">
                       ニコニコ動画
                     </Link>
-                    <Link target="_brank" className="link work_link" to="https://www.youtube.com/@maakunn89/featured">
+                    <Link target="_blank" rel="noopener noreferrer" className="link work_link" to="https://www.youtube.com/@maakunn89/featured">
                       YouTube
                     </Link>
                   </div>
@@ -146,7 +146,7 @@ const Works = () => {
                         サムネイルをクリックすると拡大できます。
                       </div>
                       <div className="work_caption">
-                        ここにない作品は<a className="link" href="https://www.pixiv.net/users/10358070" target="_brank">pixiv</a>などをご覧ください。
+                        ここにない作品は<a className="link" href="https://www.pixiv.net/users/10358070" target="_blank" rel="noopener noreferrer">pixiv</a>などをご覧ください。
                       </div>
                     </div>
                   </div>
@@ -265,7 +265,7 @@ const Works = () => {
                         <br/>
                         バ美肉体
                         <br/>
-                        デザイン:<a className="link" href="https://x.com/sakana299" target="_brank">さかなさん</a>
+                        デザイン:<a className="link" href="https://x.com/sakana299" target="_blank" rel="noopener noreferrer">さかなさん</a>
                       </div>
                     </div>
                     <div className="work_single">
@@ -330,13 +330,13 @@ const Works = () => {
                     <div className="work_title">LINEスタンプ 3種　発売中</div>
                     <div className="works_description">我が家のゆきこスタンプ 1・2</div>
                     <div className="works_row">
-                      <Link target="_brank" to="https://store.line.me/stickershop/product/22412308/ja">
+                      <Link target="_blank" rel="noopener noreferrer" to="https://store.line.me/stickershop/product/22412308/ja">
                         <div className="switch_image">
                           <img src={yukiko1} className="yukiko1" alt="yukiko1_thumbnail" />
                           <img src={yukiko1_hover} className="yukiko1" alt="yukiko1_hover" />
                         </div>
                       </Link>
-                      <Link target="_brank" to="https://store.line.me/stickershop/product/25235410/ja">
+                      <Link target="_blank" rel="noopener noreferrer" to="https://store.line.me/stickershop/product/25235410/ja">
                         <div className="switch_image">
                           <img src={yukiko2} className="yukiko2" alt="yukiko2_thumbnail" />
                           <img src={yukiko2_hover} className="yukiko2" alt="yukiko2_hover" />
@@ -345,7 +345,7 @@ const Works = () => {
                     </div>
                     <div className="works_description">ビジネスで使える！ 文字でスタンプ</div>
                     <div className="works_row">
-                      <Link target="_brank" to="https://store.line.me/stickershop/product/32732910/ja">
+                      <Link target="_blank" rel="noopener noreferrer" to="https://store.line.me/stickershop/product/32732910/ja">
                         <div className="switch_image">
                           <img src={business} className="business" alt="business_thumbnail" />
                           <img src={business_hover} className="business" alt="business_hover" />
@@ -360,14 +360,14 @@ const Works = () => {
                     </div>
                     <div className="works_description">(※メロンブックスの通販ページに飛びます、現在は電子版のみ)</div>
                     <div className="works_row">
-                      <a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=3342269" target="_brank">
+                      <a href="https://www.melonbooks.co.jp/detail/detail.php?product_id=3342269" target="_blank" rel="noopener noreferrer">
                         <img src={tanka} className="tanka1" alt="tanka1_thumbnail"/>
                       </a>
                     </div>
                     <div className="work_title">SUZURIにてオリジナルグッズ発売中</div>
                     <div className="works_description">ごはんがすすむシリーズ Tシャツなど取扱中</div>
                     <div className="works_row">
-                      <a href="https://suzuri.jp/maakunn89" target="_brank">
+                      <a href="https://suzuri.jp/maakunn89" target="_blank" rel="noopener noreferrer">
                         <img src={gohan} className="gohan" alt="gohan_thumbnail"/>
                       </a>
                     </div>
