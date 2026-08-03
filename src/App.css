@@ -159,3 +159,38 @@ body {
     transform: rotate(360deg);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .page_title {
+    flex-wrap: wrap;
+    row-gap: 4px;
+    font-size: 36px;
+  }
+
+  .title_description {
+    white-space: normal;
+    font-size: 16px;
+  }
+
+  .text {
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .link {
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .content_wrapper {
+    box-sizing: border-box;
+  }
+
+  .formInput {
+    width: 100%;
+    max-width: 340px;
+    box-sizing: border-box;
+  }
+}

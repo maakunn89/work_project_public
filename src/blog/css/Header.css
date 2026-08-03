@@ -43,7 +43,7 @@
     left: 0;
     content: '';
     width: 110%;
-    height: 250%;
+    height: 300%;
     transform: skewY(-20deg) scale(1, 0);
     transform-origin: left top;
     transition: .33s cubic-bezier(0.45, 0, 0.55, 1);

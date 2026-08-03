@@ -103,4 +103,12 @@
         background-position: right top, center top;
         background-size: 100% 100%, cover;
     }
+
+    .about_description {
+        padding-right: 16px;
+    }
+
+    .icons_list {
+        flex-wrap: wrap;
+    }
 }

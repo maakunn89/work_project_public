@@ -16,6 +16,7 @@ const Top = () => {
           rincipal Dawn
         </div>
         <div className="top_description">まーくん/maakunn89 のホームページです。</div>
+        <div className="top_new">2026/08/03更新：Works &gt; 歌ってみた動画を更新しました。</div>
         <div className="top_new">2026/07/13更新：About・Works &gt; それぞれ情報を最新のものに更新しました。</div>
         <div className="top_new">2025/01/28更新：Works &gt; othersに同人誌を追加しました。</div>
         <div className="top_attention">※現在モバイル版の表示を調整中です。<br/>表示が崩れる場合、お手数ですがPC版での表示をお試しください。</div>

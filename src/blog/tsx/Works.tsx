@@ -29,6 +29,7 @@ import babi_yusai from '../img/babi_yusai_grasses.png'
 import rainy from '../img/rainy_colored.png'
 import tanka from '../img/tanka.png'
 import gohan from '../img/gohangasusumu.png'
+import sayonaragokko from '../img/sayonaragokko.png'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import '../css/Works.css'
@@ -91,6 +92,13 @@ const Works = () => {
               <div className={openMovie ? 'works_list open' : 'works_list'}>
                 <div className="works_list_inner">
                   <div className="work_single">
+                    <div className="work_title">『さよならごっこ』Cover動画</div>
+                    <Link target="_blank" rel="noopener noreferrer" className="link work_link" to="https://www.youtube.com/watch?v=U6-M3bfiHVo">
+                      YouTube
+                    </Link>
+                  </div>
+                  {ImageModal(sayonaragokko, 'sayonaragokko')}
+                  <div className="work_single">
                     <div className="work_title">ボカロ曲「Dust / Tugi feat.初音ミク」MV作成</div>
                     <Link target="_blank" rel="noopener noreferrer" className="link work_link" to="https://www.nicovideo.jp/watch/sm42572636">
                       ニコニコ動画
@@ -105,7 +113,7 @@ const Works = () => {
                     <Link
                       target="_blank" rel="noopener noreferrer"
                       className="link work_link"
-                      to="https://www.youtube.com/@fukino89"
+                      to="https://soundcloud.com/fukino89"
                     >
                       SoundCloud
                     </Link>
